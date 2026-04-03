@@ -1,0 +1,157 @@
+.transaction-container {
+  margin-top: 0; /* Remove the excessive margin since padding-top is added to dashboard-container */
+  padding: 40px 60px;
+  flex-grow: 1;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f4f4f4;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%; /* Ensure it fills remaining viewport height */
+  border-radius: 0.5rem;
+}
+
+/* Wider clean layout */
+.summary,
+.data {
+  width: 80%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 40px;
+  overflow: visible;
+}
+
+.summary:hover,
+.data:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 198, 255, 0.25);
+}
+
+/* Headings */
+.summary h2,
+.data h2 {
+  color: #00c6ff;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.summary p,
+.summary h3 {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  text-align: center;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #f4f4f4;
+}
+
+thead {
+  background: rgba(0, 198, 255, 0.15);
+}
+
+th,
+td {
+  padding: 14px 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+  color: #00c6ff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transition: background 0.3s ease;
+}
+
+td {
+  font-size: 0.95rem;
+}
+
+/* Action icons styling */
+.actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.icon.edit {
+  color: #00c6ff;
+}
+
+.icon.edit:hover {
+  color: #00a8d6;
+  transform: scale(1.2);
+}
+
+.icon.delete {
+  color: #ff6b6b;
+}
+
+.icon.delete:hover {
+  color: #ff4545;
+  transform: scale(1.2);
+}
+
+/* Add button styling */
+.transaction-container > button {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0, 198, 255, 0.3);
+}
+
+.transaction-container > button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 198, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .transaction-container {
+    padding: 20px;
+  }
+
+  .summary,
+  .data {
+    width: 100%;
+    padding: 18px;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  th,
+  td {
+    padding: 10px 6px;
+  }
+}

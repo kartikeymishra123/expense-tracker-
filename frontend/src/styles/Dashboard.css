@@ -1,0 +1,162 @@
+/* Navbar Base */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  width: 100%;
+  padding-top: 0; /* Add padding equal to navbar height to prevent overlap */
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  padding: 12px 60px;
+
+  position: fixed;
+  max-height: 200px;
+  top: 0;
+  left: 0;
+
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Left Section with Logo */
+.nav-left {
+  display: flex;
+  align-items: center;
+  color: #ddd;
+  gap: 5px;
+}
+
+.logo-img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.logo-img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 8px rgba(0, 198, 255, 0.8));
+}
+
+/* Right Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-right a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-right a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00c6ff;
+  transition: width 0.3s ease;
+}
+
+.nav-right a:hover {
+  color: #00c6ff;
+}
+
+.nav-right a:hover::after {
+  width: 100%;
+}
+
+/* Account Section */
+.account-section {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #00c6ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 198, 255, 0.7);
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #1a1f2b;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  animation: fadeIn 0.25s ease;
+  min-width: 170px;
+  display: flex;
+  flex-direction: column;
+  z-index: 15;
+}
+
+/* Dropdown Buttons */
+.dropdown button {
+  background: transparent;
+  border: none;
+  color: #ddd;
+  font-size: 15px;
+  padding: 12px 18px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+/* Add a divider between buttons */
+.dropdown button + button {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Hover Effects */
+.dropdown button:hover {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  transform: translateX(3px);
+}
+
+/* Slight shadow when hovering dropdown */
+.account-section:hover .dropdown {
+  box-shadow: 0 10px 35px rgba(0, 198, 255, 0.2);
+}
+
+/* Smooth animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

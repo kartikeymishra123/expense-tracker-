@@ -1,0 +1,168 @@
+/* Smooth gradient background */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Main container */
+.total {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 360px;
+  color: #fff;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  animation: fadeIn 0.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input groups */
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.email p,
+.password p {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+/* Input fields */
+.email input,
+.password input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  transition: 0.3s ease;
+}
+::placeholder {
+  color: #00d2ff;
+}
+.email input:focus,
+.password input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 2px #00d2ff;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00d2ff, #3a47d5);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(135deg, #3a47d5, #00d2ff);
+}
+
+/* Redirect text */
+.redirect {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #ccc;
+  text-align: center;
+}
+
+.link {
+  color: #00d2ff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #3a47d5;
+  text-decoration: underline;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================== */
+/* 📱 Responsive Design */
+/* ===================== */
+
+/* Tablets (768px and below) 
+@media (max-width: 768px) {
+  .total {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .email p,
+  .password p {
+    font-size: 15px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
+  */
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .total {
+    width: 90%;
+    padding: 25px;
+    border-radius: 15px;
+  }
+
+  .email p,
+  .password p {
+    font-size: 14px;
+  }
+
+  .email input,
+  .password input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .redirect {
+    font-size: 14px;
+  }
+}
