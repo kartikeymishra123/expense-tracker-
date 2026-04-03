@@ -23,10 +23,7 @@ A full-stack Expense Tracker web application that helps users manage and track t
 ## 🛠️ Tech Stack
 
 ### Frontend:
-
-* HTML
-* CSS
-* JavaScript (or React if used)
+*React js
 
 ### Backend:
 
